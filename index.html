@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.css"
+    />
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Ecommerce Product Page</title>
+  </head>
+  <body class="relative">
+    <div class="mx-auto max-w-[1100px] px-6">
+      <header
+        class="flex items-center justify-between border-b border-gray-300 py-6 pb-10"
+      >
+        <div class="flex items-center gap-16">
+          <div class="flex items-center gap-6">
+            <div class="md:hidden block w-5 hamburger-menu">
+              <img src="./assets/images/icon-menu.svg" alt="" />
+            </div>
+            <img src="./assets/images/logo.svg" alt="" />
+          </div>
+
+          <div
+            class="nav-links hidden md:block space-x-8 text-gray-500 text-base text-center"
+          >
+            <a class="" href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-10 relative">
+          <div class="cart-icon-container">
+            <div
+              class="bg-[#ff7d19] px-1 flex items-center justify-center rounded-full text-white absolute -top-1 left-4 cursor-pointer"
+            >
+              <span class="cart-count md:text-sm">0</span>
+            </div>
+            <img
+              class="object-contain h-6 w-6 cursor-pointer"
+              src="./assets/images/icon-cart.svg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="object-contain h-8 w-8 cursor-pointer"
+              src="./assets/images/image-avatar.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- hidden mobile menu section -->
+        <div
+          class="mobile-menu-container h-full w-full hide bg-black/75 flex absolute opacity-1 transition-all duration-300 top-0 bottom-0 left-0 right-0 z-50 animate__animated animate__slideInLeft"
+        >
+          <div class="bg-white w-[200px] space-y-8 px-5">
+            <div>
+              <button class="my-4 close-btn">
+                <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                    fill="gray"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-col gap-5 text-base font-medium">
+              <a class="" href="#">Collections</a>
+              <a href="#">Men</a>
+              <a href="#">Women</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- main section -->
+      <main
+        class="product-container max-w-[900px] mx-auto flex flex-col md:flex-row md:items-center gap-3 md:gap-20 my-10 relative"
+      >
+        <!-- product images section -->
+        <div class="">
+          <div class="product-image relative overflow-hidden"></div>
+          <div
+            class="thumbnail-images-container flex items-center gap-2 md:gap-0 md:justify-between justify-center my-5 flex-wrap"
+          ></div>
+        </div>
+
+        <!-- product content section -->
+        <div class="flex-1 flex flex-col gap-3">
+          <h3 class="text-gray-400 font-medium">SNEAKER COMPANY</h3>
+          <h2 class="product-name text-3xl font-bold mb-3">
+            <br />
+          </h2>
+          <p class="product-desc text-gray-500 text-justify"></p>
+          <div>
+            <div class="flex items-center gap-6">
+              <div class="price">
+                <!-- <span class="text-2xl font-bold">$125.00</span> -->
+              </div>
+              <span class="bg-black px-2 text-white rounded-md text-sm"
+                >50%</span
+              >
+            </div>
+            <p class="line-through text-gray-500 my-2">$250.00</p>
+          </div>
+          <div
+            class="flex md:flex-row flex-col md:items-center items-start md:gap-12 gap-6"
+          >
+            <div class="bg-[#e7eaed] flex items-center gap-8 p-2 rounded-md">
+              <button class="minus">
+                <svg
+                  width="15"
+                  height="4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <defs>
+                    <path
+                      d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                      id="a"
+                    />
+                  </defs>
+                  <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+                </svg>
+              </button>
+              <span class="count text-base font-medium">0</span>
+              <button class="plus">
+                <svg
+                  width="12"
+                  height="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <defs>
+                    <path
+                      d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                      id="b"
+                    />
+                  </defs>
+                  <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+                </svg>
+              </button>
+            </div>
+            <button
+              class="add-to-cart-btn flex items-center gap-4 p-3 px-6 rounded-md font-bold text-white bg-[#ff7d19] hover:bg-[#df6f19]"
+            >
+              <span>
+                <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                    fill="white"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </span>
+              <span>Add to cart</span>
+            </button>
+          </div>
+        </div>
+        <!-- checkout modal section -->
+
+        <div
+          class="cart-container mx-auto w-[350px] hide shadow-2xl absolute md:-right-28 right-0 -top-16 rounded-md bg-white z-9 animate__animated animate__fadeIn"
+        >
+          <div class="pb-5 p-5 border-b border-gray-300">
+            <h4 class="font-medium">Cart</h4>
+          </div>
+          <div class="px-5 p-3 relative">
+            <div class="cart-items flex items-center justify-between"></div>
+            <div class="checkout-btn-container hide flex justify-center my-6">
+              <button
+                class="gap-4 p-2 px-10 rounded-md font-bold text-white bg-[#ff7d19]"
+              >
+                Checkout
+              </button>
+            </div>
+          </div>
+          <div class="empty-cart p-3"></div>
+        </div>
+      </main>
+      <!-- pop-up modal  -->
+
+      <div
+        class="modal-container hide h-full w-full bg-black/75 flex items-center justify-center fixed opacity-1 transition-all duration-300 top-0 bottom-0 left-0 right-0 z-50"
+      >
+        <div class="rounded-md">
+          <div class="flex justify-end mb-5 hover:text-[#ff7d19] text-white">
+            <!-- close icon -->
+            <button class="icon-close">
+              <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-center relative">
+            <!-- previous icon -->
+            <button
+              class="previuos-icon w-8 h-8 bg-white rounded-full flex items-center justify-center absolute top-[50%] -left-3 hover:text-[#ff7d19]"
+            >
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 1 3 9l8 8"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill=" none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <!-- product-img -->
+            <div class="popUp-product-image-container"></div>
+            <!-- next icon -->
+            <button
+              class="next-icon w-8 h-8 bg-white rounded-full flex items-center justify-center absolute top-[50%] -right-3 hover:text-[#ff7d19]"
+            >
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m2 1 8 8-8 8"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="popUpThumb-container flex items-center gap-2 md:gap-0 md:justify-between justify-center my-5 flex-wrap"
+          ></div>
+        </div>
+      </div>
+      <!-- no items in cart modal -->
+      <div
+        class="modal-container2 hide h-full w-full bg-black/40 flex items-center justify-center fixed opacity-1 transition-all duration-300 top-0 bottom-0 left-0 right-0 z-50"
+      >
+        <div class="rounded-sm bg-white w-[400px] p-6 text-gray-500">
+          <div class="flex justify-end mb-5 hover:text-[#ff7d19]">
+            <!-- close icon -->
+            <button class="icon-close2">
+              <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="text-center space-y-4">
+            <p class="text-lg font-medium">No Items in Cart!</p>
+            <p>Add any of our amazing product to cart to get started!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+  <script src="./slider.js"></script>
+</html>
