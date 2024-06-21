@@ -41,7 +41,7 @@ let productData = [
 ];
 cart = [];
 
-// display products image and thubnail function by creating new element and appending them to their various parent containers
+// display products image and thubnail function
 const listProduct = () => {
   thumbnailImageContainer.innerHTML = "";
 
@@ -52,7 +52,7 @@ const listProduct = () => {
       "md:w-[340px]",
       "w-full",
       "rounded-xl",
-      "cursor-pointer"
+      "cursor-zoom-in"
     );
 
     productImage.src = product.image;
@@ -107,6 +107,7 @@ decreamentBtn.addEventListener("click", () => {
   }
 });
 
+// toast function
 function pushNotify() {
   new Notify({
     title: "Cart",
@@ -144,6 +145,7 @@ addToCartModalCloseBtn.addEventListener("click", () => {
   addToCartModal.classList.add("hide");
 });
 
+// toggle cart icon
 function closePopup(event) {
   if (
     !cartContainer.contains(event.target) &&
@@ -157,7 +159,6 @@ function toggleCart() {
   showItemsInCart();
   cartQty.innerHTML = 0;
 }
-// toggle cart icon
 cartIconContainer.addEventListener("click", (event) => {
   event.stopPropagation();
   toggleCart();

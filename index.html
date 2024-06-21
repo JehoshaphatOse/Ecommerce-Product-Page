@@ -185,7 +185,7 @@
         <!-- checkout modal section -->
 
         <div
-          class="cart-container mx-auto w-[350px] hide shadow-2xl absolute md:-right-28 right-0 -top-16 rounded-md bg-white z-9 animate__animated animate__fadeIn"
+          class="cart-container mx-auto w-[350px] hide shadow-2xl justify-center absolute md:-right-28 -right-[8px] -top-16 rounded-md bg-white z-9 animate__animated animate__fadeIn"
         >
           <div class="pb-5 p-5 border-b border-gray-300">
             <h4 class="font-medium">Cart</h4>
@@ -275,8 +275,15 @@
               </svg>
             </button>
           </div>
-          <div class="text-center space-y-4">
-            <p class="text-lg font-medium">No Items in Cart!</p>
+          <div
+            class="text-center flex flex-col gap-6 justify-center items-center"
+          >
+            <p class="text-lg font-medium">Your Cart is empty!</p>
+            <img
+              class="w-[100px] object-contain overflow-hidden"
+              src="./assets/images/empty-cart (3).png"
+              alt=""
+            />
             <p>Add any of our amazing product to cart to get started!</p>
           </div>
         </div>
