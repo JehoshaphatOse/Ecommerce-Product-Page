@@ -107,6 +107,12 @@ decreamentBtn.addEventListener("click", () => {
   }
 });
 
+function pushNotify() {
+  new Notify({
+    title: "Cart",
+    text: "Product(s) added to Cart Sucessfully",
+  });
+}
 // add to cart function
 addToCart.addEventListener("click", () => {
   if (count === 0) {
@@ -124,31 +130,39 @@ addToCart.addEventListener("click", () => {
           price: product.price,
           image: product.image,
         });
-        function pushNotify() {
-          new Notify({
-            title: "Cart",
-            text: "Product(s) added to Cart Sucessfully",
-          });
-        }
-        pushNotify();
       }
     });
+
+    pushNotify();
   }
 
   cartCount.innerHTML = count;
   calculatePrice();
   showItemsInCart();
-  cartQty.innerHTML = 0;
 });
 addToCartModalCloseBtn.addEventListener("click", () => {
   addToCartModal.classList.add("hide");
 });
 
-// toggle cart icon
-cartIconContainer.addEventListener("click", () => {
+function closePopup(event) {
+  if (
+    !cartContainer.contains(event.target) &&
+    !cartIconContainer.contains(event.target)
+  ) {
+    cartContainer.classList.add("hide");
+  }
+}
+function toggleCart() {
   cartContainer.classList.toggle("hide");
   showItemsInCart();
+  cartQty.innerHTML = 0;
+}
+// toggle cart icon
+cartIconContainer.addEventListener("click", (event) => {
+  event.stopPropagation();
+  toggleCart();
 });
+document.addEventListener("click", closePopup);
 
 // calculate product price function
 

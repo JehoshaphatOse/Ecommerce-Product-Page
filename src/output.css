@@ -673,6 +673,10 @@ video {
   left: -0.75rem;
 }
 
+.-left-\[2px\]{
+  left: -2px;
+}
+
 .-right-3{
   right: -0.75rem;
 }
@@ -2166,6 +2170,14 @@ video {
      object-fit: scale-down;
 }
 
+.p-10{
+  padding: 2.5rem;
+}
+
+.p-12{
+  padding: 3rem;
+}
+
 .p-2{
   padding: 0.5rem;
 }
@@ -2891,8 +2903,24 @@ video {
 }
 
 @media (min-width: 768px){
+  .md\:-left-0{
+    left: -0px;
+  }
+
   .md\:-right-28{
     right: -7rem;
+  }
+
+  .md\:-left-\[0px\]{
+    left: -0px;
+  }
+
+  .md\:left-0{
+    left: 0px;
+  }
+
+  .md\:-left-1{
+    left: -0.25rem;
   }
 
   .md\:block{
