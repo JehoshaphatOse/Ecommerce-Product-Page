@@ -169,7 +169,7 @@ document.addEventListener("click", closePopup);
 
 const calculatePrice = () => {
   productData.forEach((data) => {
-    itemPrice.innerHTML = `<span class="price text-xl font-bold">$${data.price}.00</span>`;
+    itemPrice.innerHTML = `<span class="price text-3xl font-bold">$${data.price}.00</span>`;
     totalPrice = count * data.price;
   });
 };

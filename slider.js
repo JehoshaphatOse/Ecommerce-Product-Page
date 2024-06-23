@@ -9,6 +9,8 @@ const nextIcon = document.querySelector(".next-icon");
 const mobileCloseIcon = document.querySelector(".close-btn");
 const hamburgerIcon = document.querySelector(".hamburger-menu");
 const mobileMenuContainer = document.querySelector(".mobile-menu-container");
+const mobileNextBtn = document.querySelector(".next-icon-mobile");
+const mobilePrevBtn = document.querySelector(".previuos-icon-mobile");
 
 productImage.addEventListener("click", () => {
   modalContainer.classList.remove("hide");
@@ -24,6 +26,7 @@ hamburgerIcon.addEventListener("click", () => {
 });
 
 let currentThumbnailIndex = 0;
+
 const showPopUpModal = () => {
   productData.forEach((product) => {
     popUpImage = document.createElement("img");
@@ -99,6 +102,19 @@ const showPopUpModal = () => {
             img.classList.remove("active");
           }
         });
+    });
+
+    mobileNextBtn.addEventListener("click", () => {
+      currentThumbnailIndex =
+        (currentThumbnailIndex + 1) % product.thumbnails.length;
+      productImage.src = product.thumbnails[currentThumbnailIndex];
+    });
+
+    mobilePrevBtn.addEventListener("click", () => {
+      currentThumbnailIndex =
+        (currentThumbnailIndex - 1 + product.thumbnails.length) %
+        product.thumbnails.length;
+      productImage.src = product.thumbnails[currentThumbnailIndex];
     });
   });
 };

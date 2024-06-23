@@ -104,34 +104,79 @@
       >
         <!-- product images section -->
         <div class="">
-          <div class="product-image relative overflow-hidden"></div>
+          <div class="flex items-center justify-center relative">
+            <!-- previous icon hidden on desktop -->
+            <button
+              class="previuos-icon-mobile w-10 h-10 bg-white md:hidden rounded-full flex items-center justify-center absolute top-[50%] left-3 hover:text-[#ff7d19] z-50"
+            >
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 1 3 9l8 8"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill=" none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <!-- product-img -->
+            <div class="product-image relative"></div>
+            <!-- next icon hidden on desktop -->
+            <button
+              class="next-icon-mobile w-10 h-10 bg-white md:hidden rounded-full flex items-center justify-center absolute top-[50%] right-3 hover:text-[#ff7d19]"
+            >
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m2 1 8 8-8 8"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+
           <div
-            class="thumbnail-images-container flex items-center gap-2 md:gap-0 md:justify-between justify-center my-5 flex-wrap"
+            class="thumbnail-images-container hidden md:flex items-center justify-between my-5 flex-wrap"
           ></div>
         </div>
 
         <!-- product content section -->
-        <div class="flex-1 flex flex-col gap-3">
+        <div class="flex-1 flex flex-col gap-5">
           <h3 class="text-gray-400 font-medium">SNEAKER COMPANY</h3>
           <h2 class="product-name text-3xl font-bold mb-3">
             <br />
           </h2>
           <p class="product-desc text-gray-500 text-justify"></p>
           <div>
-            <div class="flex items-center gap-6">
-              <div class="price">
-                <!-- <span class="text-2xl font-bold">$125.00</span> -->
+            <div class="flex md:flex-col flex-row md:gap-6 justify-between">
+              <div class="flex items-center gap-6">
+                <div class="price flex">
+                  <!-- <span class="text-2xl font-bold">$125.00</span> -->
+                </div>
+                <p class="bg-black p-1 px-4 text-white rounded-md text-lg">
+                  50%
+                </p>
               </div>
-              <span class="bg-black px-2 text-white rounded-md text-sm"
-                >50%</span
+              <p
+                class="line-through md:hidden block text-gray-500 font-medium my-2 text-lg"
               >
+                $250.00
+              </p>
             </div>
-            <p class="line-through text-gray-500 my-2">$250.00</p>
+            <p
+              class="line-through md:block hidden text-gray-500 font-medium my-2"
+            >
+              $250.00
+            </p>
           </div>
           <div
             class="flex md:flex-row flex-col md:items-center items-start md:gap-12 gap-6"
           >
-            <div class="bg-[#e7eaed] flex items-center gap-8 p-2 rounded-md">
+            <div
+              class="w-full bg-[#e7eaed] flex items-center justify-between p-2 px-8 rounded-md"
+            >
               <button class="minus">
                 <svg
                   width="15"
@@ -167,7 +212,7 @@
               </button>
             </div>
             <button
-              class="add-to-cart-btn flex items-center gap-4 p-3 px-6 rounded-md font-bold text-white bg-[#ff7d19] hover:bg-[#df6f19]"
+              class="w-full add-to-cart-btn flex items-center justify-center gap-4 p-3 px-6 rounded-md font-bold text-white bg-[#ff7d19] hover:bg-[#df6f19]"
             >
               <span>
                 <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -278,7 +323,7 @@
           <div
             class="text-center flex flex-col gap-6 justify-center items-center"
           >
-            <p class="text-lg font-medium">Your Cart is empty!</p>
+            <p class="text-lg font-medium">Your cart is empty!</p>
             <img
               class="max-w-[100px] overflow-hidden"
               src="./assets/images/empty-cart (3).png"
